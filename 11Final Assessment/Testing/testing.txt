@@ -1,0 +1,9 @@
+As for the testing: this, in turn, is split into four "tests", each with its own folder inside the Testing folder.
+
+In the folder named 1First_Test, I try to plug in various silly values into the various functions. Often times, the compiler just yelps, "Don't do that specific thing!" I assume this is exactly what we want to happen in these cases, and so I've commented out the lines in question. I didn't succeed in making my programs crash in an ugly way by this method, which means either my code was perfect to begin with, or I’m not imaginative enough to find the flaws. Hopefully the former, but possibly the latter.
+
+Secondly, I went through the same functions, trying to find an assert that spat out the wrong answer. Again, I couldn't find anything.
+
+Thirdly, I ran Valgrind on my main course program. It seemed to find a lot of memory leaks; see the screenshot and valgrind.txt in the 3Third_Test folder. I can't really see, from the reports, where they're coming from, but, given that the code I've written doesn't contain any explicit mallocs, they must be coming from SDL. And, if Stack Exchange is to be believed, SDL memory leaks can be safely ignored.
+
+Finally, I showcase the "higher level" tests, i.e. of the program as a whole. Which is to say: the program produces the expected output when run on these files, therefore it can't be all that bad! This higher level testing includes the deliberately silly move of trying to run the program using a video file - a clip of Brezhnev attending a parade in Moscow - which just produces - as I would hope - an SDL window of random guff.

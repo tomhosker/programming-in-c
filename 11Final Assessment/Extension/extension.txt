@@ -1,0 +1,33 @@
+As for the extension: you'll see that I've devised a system, a kind of cross between assembly language and Latex, for authoring one's own teletext pages.
+
+### Writing the Code ###
+
+Using this system, in order to build the teletext page in question, one first has to write it out in the simple language I've devised. Now this language works like so:
+
+# A single character of code prints that character on the page; all the ASCII characters are encoded like this.
+# The non-ASCII characters which appear in the font files are encoded by their own commands, e.g. POUND prints the £ symbol.
+# Spaces are printed using the SPACE command.
+# Commands and characters are separated using spaces, so, if one wanted to print words, one would have to encode them l i k e SPACE t h i s .
+# New lines are printed using the NEWLINE command. New lines in the code itself may be inserted wherever the user finds most helpful; the translator will simply ignore them.
+# Other commands, such as for double heighted characters, are made using an appropriate abbreviation; in this case DOUBLEHT. See controlstrings.h for the full list.
+# The code file must either (a) describe at least 25 complete lines of teletext, or (b) be ended with the END command, or both. If the user fails to comply with this rule, the resulting SDL window isn't going to be pretty.
+
+### Building the Window ###
+
+Now, having authored one's "TeleLatex" code file, one then has to carry out the following steps in order to build the SDL window:
+
+# Put your code into a plain text file;
+# Name this file input.txt;
+# Paste the file into the extension folder;
+# If necessary, build the printer, translator and wab programs using make trans;
+# With the appropriate directory selected, run make print at the command line.
+
+Carrying out these steps achieves the following:
+
+# The "assembly language" file input.txt is translated into the "machine code" file translated.txt using the program translator which I wrote for this purpose;
+# The translated.txt plain text file is converted to a binary file, called translated.m7, using another program I wrote called wab;
+# The binary file translated.m7 is then printed, using the printer program, which is identical to the main program from before.
+
+### Reflection ###
+
+With a pinch of luck, your teletext page should be printed to an SDL window as intended. There did, in earlier versions, seem to be a couple of bugs; it didn’t seem to like four spaces together in some contexts. But three spaces and five spaces were okay. Originally I was using Linux's built-in reverse hexdump feature to make translated.m7 out of translated.txt. Once I decided to stop being lazy, and build my own reverse hexdump-er in C, the problem seems to have disappeared. If I'd had more time, I would, of course, have carried out more rigorous tests on my program.

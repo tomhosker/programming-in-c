@@ -1,0 +1,14 @@
+==8646== 17,317,904 bytes in 1 blocks are possibly lost in loss record 1,090 of 1,090
+==8646==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8646==    by 0xD341779: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+==8646==    by 0xD514539: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+==8646==    by 0xD4CE0B0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+==8646==    by 0xB89D23E: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+==8646==    by 0xB89D2F2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+==8646==    by 0xB86D0FA: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+==8646==    by 0xB86D3F8: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+==8646==    by 0x4EF859F: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+==8646==    by 0x4EEB0EF: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+==8646==    by 0x4E9732F: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+==8646==    by 0x4E8FE12: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+==8646== 
