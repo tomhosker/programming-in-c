@@ -1,0 +1,9 @@
+# Use "sscanf" to get strings of the correct size from the user.
+
+# Write a function "swap_one(string)", which swaps the first letter in a string with a 'a', and searches for a match in the dictionary; then, if it doesn't find a match, swaps the first letter with 'b' and searches for a match... then, if it doesn't find a match, swaps the first letter with 'z' and searches for a match; then, if it still doesn't find a match, swaps the second letter with... then, if it still doesn't find a match, swaps the fourth letter with 'z' and searches for a match.
+
+# Write a function "is_path(string_1, string_2)", which returns 1 if, by performing a series of "swap_one"s on string_1, string_2 can be produced, and 0 otherwise.
+
+# Write a function "edit_distance(string_1, string_2)", which checks both "is_path(string_1, string_2)" and, "common", the number of common characters between the two strings. If "is_path(string_1, string_2)" == 0, return 5. Otherwise return 4-"common".
+
+# Write a function "print_path(string_1, string_2)".
