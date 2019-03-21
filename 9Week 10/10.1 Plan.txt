@@ -1,0 +1,11 @@
+# Write an "add_step" function which will add a board to our graph of boards.
+# Write a "search_tree" function which will search through all of our tree of boards.
+# Revise the "add_step" function, so that, on attempting to add a board already on the tree, it will do nothing.
+
+# Use the triplet of "is_movable" functions on every tile of the initial board in order to find all possible initial moves.
+# Add the resulting boards to our tree, with each board having its "previous" component pointing to the initial board.
+# Repeat this process of adding to our tree on each new "Step" thus produced.
+# Write a "make_tree" function which keeps adding "Step"s until all possible moves have been exhausted.
+
+# Write a "search_boards_in_tree" function which searches our tree for a board where a particular tile is occupied.
+# Write a "print_moves" function which takes the board found by "search_boards_in_tree" and prints out all previous boards up to the initial board.
